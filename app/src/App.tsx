@@ -1,7 +1,7 @@
 import "@mantine/core/styles.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Product from "./pages/Product";
+import {Product} from "./pages/Product";
 import { OneColumnLayout } from "./layout/OneColumnLayout";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<OneColumnLayout/>}>
-          <Route path="/product" element={<Product/>}/>
+          <Route path="/product/:id" element={<Product/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
