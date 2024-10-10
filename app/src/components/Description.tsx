@@ -27,7 +27,7 @@ const { title, text, price, badges } = props;
         )
       })}
       <Text size="xl" mt="md">
-        ${price}
+        {price} €
       </Text>
       <Text mt="xs">{text}</Text>
     </Box>

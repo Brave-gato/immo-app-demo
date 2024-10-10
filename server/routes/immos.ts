@@ -8,7 +8,8 @@ router.get("/:id", async (req: Request, res: Response) => {
     if(!id)
         res.send("All parameters mus be mandatory").status(400);
     else {
-        res.send(await findOneById(`${id}`)).status(200)
+        const immo = await findOneById(`${id}`)
+        res.send(immo).status(200)
     }
 })
 
