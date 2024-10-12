@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express";
 import cors from "cors";
 import immos from "./routes/immos";
+import contactForm from "./routes/contactForm";
 import { connectToDatabase } from "./db/connection";
 
 const PORT = process.env.PORT || 5050;
@@ -18,6 +19,7 @@ app.get('/status', (req: Request, res: Response) => {
 connectToDatabase()
     .then(() => {
         app.use("/immos", immos)
+        app.use("/contactForm", contactForm)
 
         app.listen(PORT, () => {
             console.log("Server running at PORT: ", PORT);
