@@ -13,9 +13,11 @@ export async function connectToDatabase() {
 
     const immosCollection: Collection = db.collection("immos");
     const contactFormCollections: Collection = db.collection("contactForm")
+    const newsletterFormCollections: Collection = db.collection("newsletterForm")
 
     collections.immos = immosCollection;
-    collections.contactForm = contactFormCollections
+    collections.contactForm = contactFormCollections;
+    collections.newsletter = newsletterFormCollections;
 }
 
-export const collections: { immos?: Collection, contactForm?: Collection } = {}
+export const collections: { immos?: Collection, contactForm?: Collection, newsletter?: Collection } = {}

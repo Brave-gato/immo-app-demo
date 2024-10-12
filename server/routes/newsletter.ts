@@ -1,12 +1,12 @@
 import express, { Request, Response } from "express";
-import { saveContactForm } from "../services/contactForm";
+import { saveNewsletterForm } from "../services/newsletter";
 
 const router = express.Router();
 
 router.post("/", async (req: Request, res: Response) => {
-    const contactForm = saveContactForm(req.body);
+    const newsletterForm = saveNewsletterForm(req.body);
 
-    res.send(contactForm).status(200);
+    res.send(newsletterForm).status(200);
 })
 
 export default router;
